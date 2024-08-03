@@ -1,15 +1,7 @@
-name = 'SamuRaIchI'
-print(name)
-age = 20
-print(age)
-new_age = 21
-print(new_age)
-is_student = age<new_age
-print(is_student)
-
-
-
-age = 20+1
-print(age)
-is_student = 20<21
-print(is_student)
+immutable_var = 1,2,4,'clovo'       #Значение элемента кортежа можно изменить тольео если он в []
+print(immutable_var)                                       #В других случаях он не изменяем
+mutable_list = [1,2],3,'clovo'
+print(mutable_list)
+mutable_list[0][1] = 'samka'
+mutable_list[0][0] = 4
+print(mutable_list)
