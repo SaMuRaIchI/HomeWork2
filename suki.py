@@ -1,14 +1,23 @@
-date_ = {'Sandi':1997,'Sara':2001,'Andrei':2003}
-print(date_)
-print(date_.get('Andrei'))
-print(date_.get('Max','Ошибка ввода!'))
-date_.update({'Anton':2002,
-               'Dana':2004})
-print(date_.pop('Sandi'))
-print(date_)
+#grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
+#students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
+#input_grades = input("Введите оченки через запятую: ")
+#grades_list = input_grades.split(',')
+#grades = [int(grade.strip()) for grade in grades_list ]
+#total_sum = sum(grades)
+#total_count = len(grades)
+#averege_grade = total_sum/total_count
+#print('Сумма оченок: ', total_sum)
+#print('Количество оченок:',total_count)
+#print('Средний бал:',averege_grade)
+                                                 # Тут я не понял как мне с именами соеденить
 
-my_set = {1, 2, 5, 4, 3, 2, 5, 65, 345, 76, 3, 1, 8, 5, 4}
-print(my_set)
-my_set.update({40,26})
-my_set.remove(76)
-print(my_set)
+
+grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
+students = ['Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron']
+all_students=dict()
+all_students.update({students[4]:sum(grades[0])/len(grades[0]),
+                     students[1]:sum(grades[1])/len(grades[1]),
+                     students[0]:sum(grades[2])/len(grades[2]),
+                     students[3]:sum(grades[3])/len(grades[3]),
+                     students[2]:sum(grades[4])/len(grades[4])})
+print(all_students)
