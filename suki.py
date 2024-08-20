@@ -1,8 +1,20 @@
-my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-index = 0
-while index < len(my_list):           # Насколько я понимаю цикл не закончиться до тех пор пока список будет больше значения индекс
-    if my_list[index] < 0:           # А тут он остановиться когда 0 не будет больше
-        break
-    if my_list[index] > 0:               # Ну а тут все числа больше нуля и весь этот цикл закончиться когда дойдет до 0
-        print(my_list[index])
-    index += 1
+def two_numbers(number):
+    pass_ = list()
+    comb_ = number + 1 // 2
+    for i in range(1, comb_):
+        j = i + 1
+        while i + j <= number:
+            if number % (i + j) == 0:
+                pass_numbers = str(i) + str(j)
+                pass_.append(pass_numbers)
+            j += 1
+    return pass_
+password = True
+while password:
+    input_number = int(input('Введите число от 3 до 20: '))
+    if input_number in range(3, 21):
+        password = False
+    else:
+        print('Введено неверное число, повторите попытку...')
+        continue
+print(*two_numbers(input_number), ' - искомые комбинации пороля')
