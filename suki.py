@@ -1,20 +1,15 @@
-def two_numbers(number):
-    pass_ = list()
-    comb_ = number + 1 // 2
-    for i in range(1, comb_):
-        j = i + 1
-        while i + j <= number:
-            if number % (i + j) == 0:
-                pass_numbers = str(i) + str(j)
-                pass_.append(pass_numbers)
-            j += 1
-    return pass_
-password = True
-while password:
-    input_number = int(input('Введите число от 3 до 20: '))
-    if input_number in range(3, 21):
-        password = False
+def send_email(message, recipient, *, sender="university.help@gmail.com"):
+    if recipient == sender:
+        print("Нельзя отправить письмо самому себе!")
+    elif sender == "university.help@gmail.com":
+        print("Письмо успешно отправлено с адреса", sender, "на адрес", recipient)
+    elif ("@" and (".com" or ".ru" or ".net")) not in recipient and ("@" and (".com" or ".ru" or ".net")) not in sender:
+        print("Невозможно отправить письмо с адреса", sender, "на адрес", recipient)
     else:
-        print('Введено неверное число, повторите попытку...')
-        continue
-print(*two_numbers(input_number), ' - искомые комбинации пороля')
+        print("НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса", sender, "на адрес", recipient)
+
+
+send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
